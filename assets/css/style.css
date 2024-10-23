@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("/assets/fonts/AfacadFlux-Light.ttf") format('truetype');
+}
+
+
+
+:root {
+  background-color: #121212;
+  color: #F5F5F5;
+}
+
+* {
+  font-family: "Afacad Flux", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  z-index: 100;
+  
+  background-color: #23232351;
+  backdrop-filter: blur(5px);
+  
+  border-bottom: 2px solid #232323; 
+
+  position: sticky;
+  top: 0px;
+  
+  height: 8svh;
+  padding: 0px 1rem;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+
+  justify-content: start;
+  align-items: center;
+
+  a {
+    width: fit-content;
+    font-size: 2rem;
+    color: #5f5fff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #1412a3;
+    text-decoration: underline;
+  }
+}
+
+main {
+  width: 70svw;
+  height: 92svh;
+  padding: 0px 1rem;
+
+  h1 {
+    padding-top: 20svh;
+    width: fit-content;
+    font-size: 8rem;
+    font-weight: 200;
+    line-height: 1;
+
+    a {
+      font-weight: 200;
+      color: #F05454;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #D03434;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+section {
+  height: 91svh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1rem;
+
+  h3 {
+    font-size: 4rem;
+    font-weight: 100;
+  }
+
+  article {
+    padding-left: 4rem;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h4::before {
+      content: "~ ";
+    }
+
+    h4 {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  
+    p::before {
+      content: "| ";
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+
+  article:hover {
+    color: #D03434;
+
+    h4 {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    height: auto;
+    padding: 1rem;
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  main {
+    width: 90svw;
+    h1 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  section {
+    h3 {
+      font-size: 3rem;
+    }
+
+    article {
+      padding-left: 2rem;
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Responsive styling for very small screens (mobile) */
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+    a {
+      font-size: 1.2rem;
+    }
+  }
+
+  main {
+    width: 95svw;
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  section {
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    article {
+      padding-left: 1rem;
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
