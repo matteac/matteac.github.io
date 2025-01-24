@@ -1,0 +1,3 @@
+[submodule "brosh"]
+	path = brosh
+	url = git@github.com:matteac/brosh.git
